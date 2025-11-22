@@ -43,8 +43,13 @@ Thumbs.db
 
 # Docker volumes
 postgres_data/
-screenshots/
-reports/
+/screenshots/
+/reports/
+backend/screenshots/
+backend/reports/
+
+# Allow documentation screenshots
+!docs/screenshots/
 
 # Logs
 *.log
