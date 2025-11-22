@@ -30,6 +30,27 @@ A comprehensive web hosting management and SEO monitoring platform for managing 
 
 ### Installation
 
+#### Option 1: Using Pre-built Images (Recommended for Production)
+
+Pull and run pre-built Docker images from GitHub Container Registry:
+
+```bash
+# Clone repository for docker-compose file
+git clone <repository-url>
+cd longbark-maintenance
+
+# Configure environment
+cp .env.example .env
+# Edit .env with your settings
+
+# Pull and start with pre-built images
+docker-compose -f docker-compose.production.yml up -d
+```
+
+See [docs/DOCKER.md](docs/DOCKER.md) for detailed Docker deployment instructions.
+
+#### Option 2: Build from Source (Development)
+
 1. Clone the repository:
 ```bash
 git clone <repository-url>
@@ -48,7 +69,7 @@ docker-compose up -d
 ```
 
 4. Access the application:
-- Dashboard: http://localhost:3000
+- Dashboard: http://localhost:3000 (or http://localhost if using production compose)
 - API: http://localhost:8000
 - API Docs: http://localhost:8000/docs
 
@@ -67,9 +88,9 @@ See [docs/CONFIGURATION.md](docs/CONFIGURATION.md) for detailed configuration op
 
 ## Documentation
 
-- [Setup Guide](docs/SETUP.md)
+- [Docker Deployment Guide](docs/DOCKER.md)
+- [Configuration Guide](docs/CONFIGURATION.md)
 - [User Guide](docs/USER_GUIDE.md)
-- [API Documentation](docs/API.md)
 - [NTFY Integration](docs/NTFY.md)
 - [Invoice Ninja Integration](docs/INVOICE_NINJA.md)
 
