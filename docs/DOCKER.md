@@ -102,11 +102,10 @@ docker-compose up --build -d
 
 ### Image Platforms
 
-The GitHub Actions workflow builds multi-platform images for:
+The GitHub Actions workflow currently builds images for:
 - `linux/amd64` (x86_64)
-- `linux/arm64` (ARM64, Apple Silicon)
 
-Docker will automatically pull the correct image for your platform.
+ARM64 support (Apple Silicon, ARM servers) can be added by updating the workflow's `platforms` configuration.
 
 ### Updating to Latest Version
 
